@@ -1,0 +1,58 @@
+*{
+    background-color: black;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top: 3%;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 33px;
+}
+
+.left-logo{
+    position: absolute;
+    left: 9%;
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.nav-list{
+    display: flex;
+    position: absolute;
+    left: 20%;
+
+}
+
+.nav-list a{
+    color: #FF4655;
+    margin-right: 60px;
+    font-size: 15px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+}
+
+.duelist-logo{
+        position: absolute;
+        right: 9%;
+        width: 70px;
+        height: 70px;
+        background-image: url('Assets/duelistLogo.png');
+        background-size: contain;
+        background-repeat: no-repeat;    
+        display: block;
+}
+
+
+/* no sabes como hacer que el logo quede bien encajado
+ToDo: investigar como hacerlo, aqui nos quedamos
+
+hacer lo demas 
+
+*/
