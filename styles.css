@@ -23,12 +23,13 @@ body {
 header{
     position: fixed;
     display: flex;
-    top: 2%;
-    z-index: 10;
+    top: 0; 
+    left: 0; 
     width: 100%;
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    padding: 33px;
+    margin-top: 3%;
 }
 
 .left-logo{
@@ -71,7 +72,7 @@ header{
     position: absolute;
     display: flex;
     flex-direction: column;
-    text-align: start;
+    text-align: left;
     top: 38%;
     left: 7%;
 }
@@ -105,6 +106,11 @@ header{
     gap: 20px;
 }
 
+.abilities-buttons button{
+    background-color: transparent;
+    border: none;
+}
+
 .abilities-buttons img{
     width: 50px;
     height: auto;
@@ -113,4 +119,42 @@ header{
 
 .abilities-buttons img:hover {
     transform: scale(1.2);
+}
+
+/* ------------------------- */
+.modal{
+    background-color: hsl(0, 0%, 0%);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    opacity: 1;
+    z-index: 1001;
+}
+
+.inner-modal{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+}
+
+.inner-modal h2{
+    margin: 20px 0;
+}
+
+.inner-modal p{
+    line-height: 24px;
+    margin: 20px 20px;
 }
