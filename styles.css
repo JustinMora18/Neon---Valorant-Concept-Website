@@ -76,8 +76,10 @@ header{
     display: flex;
     flex-direction: column;
     text-align: left;
-    top: 38%;
+    top: 30%;
     left: 7%;
+    margin: 0;  /* Asegúrate de que no haya margen */
+    padding: 0; /* Elimina el padding si existe */
 }
 
 .main-text h2{
@@ -102,11 +104,21 @@ header{
     margin: 10px 0;
 }
 
+.main-text p{
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    width: 40%;
+    text-align: justify;
+    margin-top: 4%;
+}
+
 /* ------------------------- */
 .abilities-buttons {
     position: absolute;
     display: flex;
-    bottom: 40%;
+    top: 29%;
     right: 58%;
     flex-direction: column;
     gap: 20px;
