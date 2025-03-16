@@ -1,23 +1,25 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .bg {
     position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     background-image: url(Assets/neonandn.png), url('Assets/bg1.png');
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 0;
 }
 
 header{
@@ -34,11 +36,11 @@ header{
 
 .left-logo{
     position: absolute;
-    left: 7%;
+    left: 3%;
     font-size: 30px;
     font-family: "Josefin Sans", sans-serif;
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
+    color: #000000;
+    font-weight: 700;
 }
 
 .nav-list{
@@ -49,7 +51,7 @@ header{
 }
 
 .nav-list a{
-    color: #FF4655;
+    color: #ff4655;
     margin-right: 60px;
     font-size: 20px;
     font-family: "Source Code Pro", monospace;
@@ -58,7 +60,7 @@ header{
 
 .duelist-logo{
         position: absolute;
-        right: 7%;
+        right: 3%;
         width: 50px;
         height: 50px;
         background-image: url('Assets/duelistLogo.png');
@@ -67,6 +69,7 @@ header{
         display: block;
 }
 
+/* ------------------------- */
 .main-text{
     font-family: "Josefin Sans", sans-serif;
     position: absolute;
@@ -76,37 +79,41 @@ header{
     top: 38%;
     left: 7%;
 }
+
+.main-text h2{
+    display: block;
+    font-size: 20px;
+    color: #FF4655;
+    margin: 20px 0;
+}
+
+.main-text h1{
+    display: block;
+    font-size: 140px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
 .main-text h3{
     display: block;
     font-size: 20px;
     color: #FF4655;
-    margin-top: 0;
-}
-.main-text h1{
-    display: block;
-    font-size: 140px;
-    font-weight: bolder;
-    color: #ffffff;
-    margin: 0;
-}
-.main-text h4{
-    display: block;
-    font-size: 20px;
-    color: #FF4655;
-    margin: 0;
+    margin: 10px 0;
 }
 
+/* ------------------------- */
 .abilities-buttons {
     position: absolute;
     display: flex;
     bottom: 40%;
     right: 58%;
     flex-direction: column;
-    text-align: center;
     gap: 20px;
 }
 
 .abilities-buttons button{
+    cursor: pointer;
     background-color: transparent;
     border: none;
 }
@@ -123,13 +130,15 @@ header{
 
 /* ------------------------- */
 .modal{
-    background-color: hsl(0, 0%, 0%);
-    opacity: 0;
+    display: none;
     position: fixed;
+    opacity: 0;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    font-family: "Source Code Pro", monospace;
+    background-color: #00000080;
     transition: all 0.3s ease-in-out;
     z-index: -1;
 
@@ -137,14 +146,24 @@ header{
     align-items: center;
     justify-content: center;
 }
+
 .modal.open{
     opacity: 1;
-    z-index: 1001;
+    z-index: 9999;
+}
+
+.closeModal {
+    position: absolute;
+    bottom: 150px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .inner-modal{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 5px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
     padding: 15px 25px;
     text-align: center;
     width: 380px;
@@ -157,4 +176,14 @@ header{
 .inner-modal p{
     line-height: 24px;
     margin: 20px 20px;
+}
+
+.modalLogo{
+    cursor: pointer;
+}
+
+.videos{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
