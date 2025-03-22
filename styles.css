@@ -36,11 +36,24 @@ header{
 
 .left-logo{
     position: absolute;
-    left: 3%;
-    font-size: 30px;
-    font-family: "Josefin Sans", sans-serif;
-    color: #000000;
-    font-weight: 700;
+    margin-top: 0.5%;
+    left: 5%;
+    width: 40px;
+    height: auto;
+    background: none;
+    font-family: "Luckiest Guy", cursive;
+    color: #122B3D;
+    cursor: pointer;
+    border: none;
+}
+.left-logo img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.left-logo img:hover {
+    transform: scale(1.2);
 }
 
 .nav-list{
@@ -51,6 +64,7 @@ header{
 }
 
 .nav-list a{
+    position: relative;
     color: #ff4655;
     margin-right: 60px;
     font-size: 20px;
@@ -58,16 +72,42 @@ header{
     font-weight: 600;
 }
 
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ff4655;
+    bottom: 0px;
+    left: 0;
+    margin: -5px 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 .duelist-logo{
-        position: absolute;
-        right: 3%;
-        width: 50px;
-        height: 50px;
-        background-image: url('Assets/duelistLogo.png');
-        background-size: contain;
-        background-repeat: no-repeat;    
-        display: block;
+    position: absolute;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background-image: url('Assets/duelistLogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;    
+    display: block;
+}
+
+.duelist-logo{
+    transition: transform 0.2s ease-in-out;
+}
+
+.duelist-logo:hover {
+    transform: scale(1.2);
 }
 
 /* ------------------------- */
@@ -79,8 +119,8 @@ header{
     text-align: left;
     top: 30%;
     left: 7%;
-    margin: 0;  /* Asegúrate de que no haya margen */
-    padding: 0; /* Elimina el padding si existe */
+    margin: 0; 
+    padding: 0; 
 }
 
 .main-text h2{
@@ -230,21 +270,12 @@ header{
     margin: 20px 20px;
 }
 
-.modalLogo{
-    cursor: pointer;
-}
+
 
 .videos{
     width: 100%;
     height: auto;
     border-radius: 20px;
 }
-
-
-
-
-
-
-
 
 
