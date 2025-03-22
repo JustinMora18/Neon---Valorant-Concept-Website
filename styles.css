@@ -28,7 +28,7 @@ header{
     top: 0; 
     left: 0; 
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
     justify-content: center;
     align-items: center;
     margin-top: 3%;
@@ -57,6 +57,7 @@ header{
     font-family: "Source Code Pro", monospace;
     font-weight: 600;
 }
+
 
 .duelist-logo{
         position: absolute;
@@ -150,7 +151,7 @@ header{
     right: 0;
     left: 0;
     font-family: "Source Code Pro", monospace;
-    background-color: #00000080;
+    background-color: #000000c4;
     transition: all 0.3s ease-in-out;
     z-index: -1;
 
@@ -161,7 +162,7 @@ header{
 
 .modal.open{
     opacity: 1;
-    z-index: 9999;
+    z-index: 1;
 }
 
 .closeModal {
@@ -174,12 +175,51 @@ header{
 }
 
 .inner-modal{
+    position: relative;
     background-color: #f3f3f3;
     border-radius: 20px;
     padding: 15px 25px;
     text-align: center;
     width: 380px;
 }
+
+/* modal border animations */
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.inner-modal::after, .inner-modal::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #f3f3f3, #006eff, #e9e94a, #006eff, #e9e94a, #006eff, #f3f3f3 );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+
+.inner-modal::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+/* ------------------------- */
 
 .inner-modal h2{
     margin: 20px 0;
@@ -199,3 +239,12 @@ header{
     height: auto;
     border-radius: 20px;
 }
+
+
+
+
+
+
+
+
+
